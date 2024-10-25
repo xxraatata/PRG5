@@ -14,7 +14,7 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand ps-3" href="index.html">TechNest</a>
+            <a class="navbar-brand ps-3" href="<?php echo base_url('index.php/LaptopController/view') ?>">TechNest</a>
         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
