@@ -9,10 +9,10 @@ class MasterController extends CI_Controller {
 
 	public function view()
 	{
-        $data['title'] = 'Dashboard';
+        $data['title'] = 'Master Laptop';
         $data['laptop'] = $this->LaptopModel->get_all();
 
-        $data['content'] = $this->load->view('dashboard', $data, TRUE);
+        $data['content'] = $this->load->view('master', $data, TRUE);
 
         $this->load->view('template', $data);
 	}
