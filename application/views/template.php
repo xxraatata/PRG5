@@ -69,5 +69,44 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="<?php echo base_url('assets/js/datatables-simple-demo.js') ?>"></script>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            const baseUrl = "<?php echo base_url();?>"
+            const barChart = (chartType) => {
+                $.ajax({
+                    url: "<?php echo base_url();?>"+'TransaksiController/dashboard',
+                    dataType: 'json',
+                    method: 'get',
+                    success: data => {
+                        let charX = []
+                        let charY = []
+                        data.map(data => {
+                            charX.push(data.merk)
+                            charY.push(data.quantity)
+                        })
+                        const charData = {
+                            labels: charX,
+                            datasets: [
+                                {
+                                    label: 'Merk',
+                                    data: charY,
+                                    backgroundColor: ['blue'],
+                                    borderColor: ['blue'],
+                                    borderWidth: 4
+                                }
+                            ]
+                        }
+                        const ctx = document.getElementById(charType).getContext('2d')
+                        const config = {
+                            type: charType,
+                            data: charData
+                        }
+                        const char = new Chart(ctx, config)
+                    }
+                })
+            }
+
+            barChart('myBarChart')
+        </script>
     </body>
 </html>
