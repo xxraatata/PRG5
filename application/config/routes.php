@@ -53,4 +53,5 @@ $route['default_controller'] = 'LaptopController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['view'] = "LaptopController/view";
+$route['viewLaptop'] = "LaptopController/view";
+$route['viewMaster'] = "MasterController/view";

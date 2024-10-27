@@ -22,7 +22,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="<?php echo base_url('index.php/LaptopController/view') ?>">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
@@ -30,7 +30,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Master</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="<?php echo base_url('index.php/MasterController/view') ?>">
                                 <div class="sb-nav-link-icon"><i class='bx bx-laptop'></i></div>
                                 Laptop
                             </a>
@@ -38,7 +38,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Transaction</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="<?php echo base_url('index.php/TransaksiController/view') ?>">
                                 <div class="sb-nav-link-icon"><i class='bx bx-money' ></i></div>
                                 Payment 
                             </a>

@@ -1,5 +1,5 @@
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Core</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
@@ -49,9 +49,12 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach($laptop as $l) : ?>
+                                        <?php
+                                        $i = 1; 
+                                        foreach($laptop as $l) : 
+                                        ?>
                                         <tr>
-                                            <td><?= $l['id'] ?></td>
+                                            <td><?= $i++ ?></td>
                                             <td><?= $l['seri_laptop'] ?></td>
                                             <td><?= $l['merk_laptop'] ?></td>
                                             <td><?= $l['stok'] ?></td>
